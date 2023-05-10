@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Text to Voice</title>
+    <script>
+        function voice() {
+            text = document.querySelector("textarea");
+            let utterance = new SpeechSynthesisUtterance(text.value);
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&display=swap');
+
+        body {
+            background-color: #E0F1F7;
+        }
+
+        .ta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7% 0 0;
+        }
+
+        textarea {
+            width: 397px;
+            height: 146px;
+            padding: 10px;
+            max-width: 100%;
+            line-height: 1.5;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #999;
+        }
+
+        /*
+        button{
+            display: grid;
+            place-items: center;
+           /* -ms-grid-column-align: center;
+            -ms-grid-row-align: center;*/
+
+
+
+        button {
+
+            background-color: #3DD1E7;
+            border: 0 solid #E5E7EB;
+            /* box-sizing: border-box; */
+            color: #000000;
+            font-family: 'Dosis', sans-serif;
+            font-size: 2rem;
+            font-weight: 500;
+            justify-content: center;
+            /* line-height: 14.75rem; 
+            padding: 7.75rem -0.35rem 0rem 0rem;*/
+            margin: 73px 0px 0px 514px;
+            text-align: center;
+            text-decoration: none #000000 solid;
+            text-decoration-thickness: auto;
+            width: 60%;
+            max-width: 225px;
+            cursor: pointer;
+            transform: rotate(-2deg);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        button:focus {
+            outline: 0;
+        }
+
+        button:after {
+            content: '';
+            position: absolute;
+            border: 1px solid #000000;
+            bottom: 4px;
+            left: 4px;
+            width: calc(100% - 1px);
+            height: calc(100% - 1px);
+        }
+
+        button:hover:after {
+            bottom: 2px;
+            left: 2px;
+        }
+
+        @media (min-width: 768px) {
+            button {
+                font-size: 1.25rem;
+            }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 48
+        }
+
+        #speaker {
+            font-size: 180px;
+            transform: rotate(-28deg);
+            color: darkturquoise;
+            opacity: 30%;
+        }
+
+        #speaker:active {
+            animation: campaign .5s cubic-bezier(.36, .07, .57, .99) infinite;
+        }
+
+        #speaker:hover {
+            transform: scale(1.5) rotate(-28deg);
+            color: #0ec3f6;
+        }
+
+        h1 {
+            display: grid;
+            place-items: center;
+            color: #0D0546;
+            font-family: 'Dosis', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">Text to Voice
+    </h1>
+    <div class="ta">
+        <textarea></textarea>
+    </div>
+    <div class="but">
+        <button onclick="voice()">
+            <span class="material-symbols-outlined">
+                <link rel="stylesheet"
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+                record_voice_over
+            </span> &ThinSpace; Speak</button>
+    </div>
+    <span class="material-symbols-outlined" id="speaker">
+        campaign
+    </span>
+
+</body>
+
+</html>
+
+<!--Khushi Patel-->
